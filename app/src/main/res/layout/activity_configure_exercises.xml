@@ -1,0 +1,68 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.home.mlld.ConfigureExercisesActivity"
+    android:orientation="vertical"
+
+>
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:id="@+id/configure_exercises_header"
+    >
+        <TextView
+            android:text="@string/title_activity_configure_exercises"
+            android:textSize="16pt"
+            android:textStyle="bold"
+            android:textColor="#000099"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:gravity="bottom|center"
+        />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_below="@+id/configure_exercises_header"
+        android:paddingTop="10dp"
+        android:id="@+id/configure_exercises_add"
+    >
+        <EditText
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter name of exercise"
+            android:id="@+id/newExerciseInput"
+        />
+        <EditText
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/newExerciseInput"
+            android:id="@+id/newExerciseCodeInput"
+            android:hint="Enter code for exercise"
+        />
+        <Button
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/newExerciseCodeInput"
+            android:layout_toEndOf="@id/newExerciseCodeInput"
+            android:layout_below="@id/newExerciseInput"
+            android:text="Add"
+            android:onClick="saveExercise"
+        />
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:layout_below="@id/configure_exercises_add"
+    >
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="List current exercises here"
+        />
+    </RelativeLayout>
+</RelativeLayout>

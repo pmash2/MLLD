@@ -1,0 +1,41 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.home.mlld.MaintenanceActivity">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="200dp"
+        android:id="@+id/maintenance_header"
+    >
+        <TextView
+            android:text="@string/title_activity_maintenance"
+            android:textSize="18pt"
+            android:textStyle="bold"
+            android:textColor="#000099"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:gravity="bottom|center"
+        />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/maintenance_header"
+    >
+        <Button
+            android:id="@+id/button_configure_exercises"
+            android:layout_width="175dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/button_personal_bests"
+            android:text="@string/title_activity_configure_exercises"
+            android:onClick="openActivity"
+        />
+    </RelativeLayout>
+
+
+</RelativeLayout>

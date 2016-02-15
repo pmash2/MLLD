@@ -1,0 +1,70 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical"
+    >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="200dp"
+        android:id="@+id/menu_header"
+    >
+
+        <TextView
+            android:text="@string/title_main_page"
+            android:textSize="18pt"
+            android:textStyle="bold"
+            android:textColor="#000099"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:gravity="bottom|center"
+        />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/menu_header"
+    >
+        <Button
+            android:id="@+id/button_new_workout"
+            android:layout_width="175dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="@string/title_activity_new_workout"
+            android:onClick="openActivity"
+        />
+        <Button
+            android:id="@+id/button_review_workout"
+            android:layout_width="175dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/button_new_workout"
+            android:text="@string/title_activity_review_workouts"
+            android:onClick="openActivity"
+        />
+        <Button
+            android:id="@+id/button_personal_bests"
+            android:layout_width="175dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/button_review_workout"
+            android:text="@string/title_activity_personal_bests"
+            android:onClick="openActivity"
+        />
+        <Button
+            android:layout_width="175dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/button_maintenance"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/button_personal_bests"
+            android:text="@string/title_activity_maintenance"
+            android:onClick="openActivity"
+        />
+    </RelativeLayout>
+
+</RelativeLayout>
